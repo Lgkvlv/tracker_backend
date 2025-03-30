@@ -23,14 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yop$#3s5$lkm2rl-0_z8gvi3(pwcx5ks40vi+kxsxfq$#i53g_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    'lgkvlv.pythonanywhere.com',
-    '127.0.0.1',
-    'localhost',
-]
-
+ALLOWED_HOSTS = ['lgkvlv.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -61,6 +56,9 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://web.telegram.org",
+    "https://lgkvlv.pythonanywhere.com'",
+    "https://lgkvlv.github.io/tracker-frontend/",
+
 ]
 
 TELEGRAM_BOT_TOKEN = '7763759531:AAGmHUuTMQjpDgsCk34mf_jilnrgO9nvmZw'
@@ -132,10 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = '/home/lgkvlv/tracker_backend/static_collected
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'front/static'),  # Путь к CSS/JS
-]
+STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
