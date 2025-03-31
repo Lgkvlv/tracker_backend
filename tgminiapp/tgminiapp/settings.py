@@ -61,6 +61,15 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
 TELEGRAM_BOT_TOKEN = '7763759531:AAGmHUuTMQjpDgsCk34mf_jilnrgO9nvmZw'
 
 ROOT_URLCONF = 'tgminiapp.urls'
