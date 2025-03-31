@@ -55,11 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://web.telegram.org",
-    "https://lgkvlv.pythonanywhere.com",
-]
-
+CORS_ALLOW_ALL_ORIGINS = True 
 
 CORS_ALLOW_HEADERS = [
     'accept',
