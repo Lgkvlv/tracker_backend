@@ -58,19 +58,8 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://web.telegram.org",
     "https://lgkvlv.pythonanywhere.com",
-    "https://lgkvlv.github.io"
 ]
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https:\/\/lgkvlv\.github\.io(\/.*)?$", 
-    r"^https:\/\/web\.telegram\.org(\/.*)?$",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.pythonanywhere.com",
-    "https://*.github.io",
-    "https://web.telegram.org"
-]
 
 CORS_ALLOW_HEADERS = [
     'accept',
