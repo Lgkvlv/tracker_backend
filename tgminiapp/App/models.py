@@ -7,7 +7,12 @@ class Customer(models.Model):
     registration_date = models.DateTimeField(auto_now_add=True)
 
 class Transaction(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(
+        Customer,
+        on_delete=models.CASCADE,
+        null=True,  # Разрешить NULL временно
+        blank=True
+    )
     points = models.IntegerField()  # + или - бонусы
     description = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now_add=True)
