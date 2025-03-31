@@ -14,21 +14,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from App.views import CategoryViewSet, TransactionViewSet
-from users.views import TelegramAuthView
-
-router = DefaultRouter()
-router.register(r'categories', CategoryViewSet, basename='categories')  # Добавляем basename
-router.register(r'transactions', TransactionViewSet, basename='transactions')
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('api/auth/telegram/', TelegramAuthView.as_view(), name='telegram-auth'),
     path('api/transactions', views.transaction_list),
     path('api/categories', views.category_list),
-    path('api/add_transaction', views.add_transaction)
+    path('api/add_transaction', views.add_transaction),
 ]
