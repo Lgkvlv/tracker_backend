@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
+from corsheaders.defaults import default_headers
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -57,13 +58,34 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://web.telegram.org",
     "https://lgkvlv.pythonanywhere.com",
-    "https://lgkvlv.github.io",
+    "https://lgkvlv.github.io"
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https:\/\/lgkvlv\.github\.io(\/.*)?$", 
+    r"^https:\/\/web\.telegram\.org(\/.*)?$",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.pythonanywhere.com",
-    "https://*.github.io"
+    "https://*.github.io",
+    "https://web.telegram.org"
 ]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'tg-init-data'  # Для Telegram WebApp
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
