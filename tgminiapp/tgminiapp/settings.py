@@ -57,7 +57,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://web.telegram.org",
     "https://lgkvlv.pythonanywhere.com'",
-    "https://lgkvlv.github.io/tracker-frontend/",
+    "https://lgkvlv.github.io/",
 
 ]
 
