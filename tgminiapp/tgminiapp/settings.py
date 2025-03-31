@@ -56,9 +56,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://web.telegram.org",
-    "https://lgkvlv.pythonanywhere.com'",
-    "https://lgkvlv.github.io/",
-
+    "https://lgkvlv.pythonanywhere.com",
+    "https://lgkvlv.github.io",
 ]
 
 REST_FRAMEWORK = {
