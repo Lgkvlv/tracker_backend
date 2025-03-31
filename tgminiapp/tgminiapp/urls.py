@@ -28,4 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/auth/telegram/', TelegramAuthView.as_view(), name='telegram-auth'),
+    path('api/transactions', views.transaction_list),
+    path('api/categories', views.category_list),
+    path('api/add_transaction', views.add_transaction)
 ]
